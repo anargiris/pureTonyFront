@@ -1,6 +1,6 @@
 import { getStrapiURL } from "./fetch";
 
-export function getStrapiMedia(media) {
+export default function getStrapiMedia(media) {
   const imageUrl = media.url.startsWith("/")
     ? getStrapiURL(media.url)
     : media.url;
