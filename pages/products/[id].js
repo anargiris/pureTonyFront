@@ -43,7 +43,6 @@ export const getStaticProps = async (ctx) => {
 };
 
 const Product = ({ product }) => {
-  console.log(product);
   const [size, setSize] = useState("");
   const [cartItems, setCartItems] = useContext(CartContext);
   const [isAdded, setIsAdded] = useState(false);
@@ -121,7 +120,10 @@ const Product = ({ product }) => {
         </button>
         <div className="p-5 flex sm:flex-row flex-col gap-4">
           <Image
-            src={getStrapiMedia(product.photo.url)}
+            src={getStrapiMedia(
+              "https://aqueous-fortress-08267.herokuapp.com/" +
+                product.photo.url
+            )}
             width={400}
             height={400}
           />
