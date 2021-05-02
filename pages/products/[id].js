@@ -120,9 +120,10 @@ const Product = ({ product }) => {
         </button>
         <div className="p-5 flex sm:flex-row flex-col gap-4">
           <Image
-            src={getStrapiMedia(
-              "https://aqueous-fortress-08267.herokuapp.com/" + product.photo
-            )}
+            src={
+              "https://aqueous-fortress-08267.herokuapp.com/" +
+              product.photo.url
+            }
             width={400}
             height={400}
           />
