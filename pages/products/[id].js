@@ -43,6 +43,7 @@ export const getStaticProps = async (ctx) => {
 };
 
 const Product = ({ product }) => {
+  console.log(product);
   const [size, setSize] = useState("");
   const [cartItems, setCartItems] = useContext(CartContext);
   const [isAdded, setIsAdded] = useState(false);
