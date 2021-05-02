@@ -119,11 +119,7 @@ const Product = ({ product }) => {
           Back
         </button>
         <div className="p-5 flex sm:flex-row flex-col gap-4">
-          <Image
-            src={getStrapiMedia(product.photo.url)}
-            width={400}
-            height={400}
-          />
+          <Image src={getStrapiMedia(product.photo)} width={400} height={400} />
           <div className="flex flex-col justify-between">
             <div>
               <h1 className="text-4xl font-bold text-gray-900 mb-1">
