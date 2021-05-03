@@ -29,7 +29,7 @@ const cart = ({ products }) => {
       <Navbar />
       <div className="w-full">
         {cartItems.length > 0 ? (
-          <div className="flex max-w-5xl h-screen mx-auto justify-evenly">
+          <div className="flex flex-col sm:flex-row max-w-5xl h-screen mx-auto justify-evenly">
             <div className="flex flex-col py-10 gap-5">
               {cartItems && cartItems.map((item) => <CartItem item={item} />)}
             </div>

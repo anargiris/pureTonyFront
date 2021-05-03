@@ -35,6 +35,7 @@ export default function Home() {
         />
         <link rel="canonical" href="https://puretony-main.vercel.app/" />
       </Head>
+
       <div className="w-full h-1 bg-pink-200"></div>
       <Navbar />
 
@@ -56,7 +57,9 @@ export default function Home() {
         </Slide>
       </Carousel>
       <div className="w-full bg-transparent bg-gradient-to-t from-gray-100 mx-auto z-10 mb-2">
-        <header className="max-w-5xl mx-auto border-b ">
+        <header className="max-w-5xl mx-auto border-b relative">
+          <div className="absolute w-5 h-5 rounded-b-full rounded-tl-full bg-gradient-to-tr from-pink-300 to-pink-600 top-5 right-0 opacity-20"></div>
+          <div className="absolute w-5 h-5 rounded-t-full rounded-br-full bg-gradient-to-br from-pink-600 to-pink-300 bottom-5 left-0 opacity-20"></div>
           <div className="p-2 flex sm:flex-row flex-col sm:text-left text-center ">
             <div className="rounded-full">
               <Image
@@ -128,7 +131,7 @@ export default function Home() {
           <div className="flex sm:flex-row flex-col gap-10">
             <Bounce left delay={900}>
               <Link href="/shop">
-                <div className="relative shadow-md transform hover:scale-105 cursor-pointer hover:-rotate-3 transition duration-300">
+                <div className="relative transform hover:scale-105 cursor-pointer hover:-rotate-3 transition duration-300">
                   <Image
                     src="/gallery/3.jpg"
                     width={500}
@@ -144,18 +147,16 @@ export default function Home() {
 
             <Bounce right delay={1200}>
               <Link href="/products/602e52e568287f23586e6875">
-                <div className="relative shadow-md transform hover:scale-105 cursor-pointer hover:rotate-3 transition duration-300">
+                <div className="relative transform hover:scale-105 cursor-pointer hover:rotate-3 transition duration-300">
                   <Image
-                    className="absolute"
                     src="/gallery/1.jpg"
                     width={500}
                     height={500}
                     alt="Promotion Image for Home page, Black Tee v2"
                   />
-
                   <span className="opacity-0 hover:opacity-100 transition duration-300 bg-black bg-opacity-80 absolute w-full pt-20 h-full top-0 left-0 text-center text-white text-3xl font-rubik px-4">
                     CHECK THE LATEST BLACK TEE v2
-                  </span>
+                  </span>{" "}
                 </div>
               </Link>
             </Bounce>
