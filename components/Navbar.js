@@ -28,6 +28,7 @@ const Navbar = () => {
                 className=""
                 height={50}
                 width={100}
+                alt="PureTony Navbar Official Logo"
               />
             </Link>
           </li>

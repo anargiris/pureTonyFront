@@ -49,6 +49,12 @@ const shop = ({ products }) => {
     <>
       <Head>
         <title>PureTony | Shop</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta
+          name="description"
+          content="The official PureTony shop page where you can find all available products that you can buy today!"
+        />
       </Head>
       <div className="w-full h-1 bg-indigo-300"></div>
 

@@ -16,7 +16,7 @@ import Bounce from "react-reveal/Bounce";
 import makeCarousel from "react-reveal/makeCarousel";
 import Slide from "react-reveal/Slide";
 const CarouselUI = ({ children }) => (
-  <div className="check w-full overflow-hidden h-8 relative text-center bg-gradient-to-r from-gray-800 via-black to-gray-800 shadow-md font-rubik text-gray-200">
+  <div className="max-w-full overflow-hidden h-8 relative text-center bg-gradient-to-r from-gray-800 via-black to-gray-800 shadow-md font-rubik text-gray-200">
     {children}
   </div>
 );
@@ -27,6 +27,13 @@ export default function Home() {
     <>
       <Head>
         <title>PureTony</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta
+          name="description"
+          content="PureTony is an urban streetwear brand located in Thessaloniki, Greece. Since 2019, it delivers high quality shirts, hats and even Covid-19 masks."
+        />
+        <link rel="canonical" href="https://puretony-main.vercel.app/" />
       </Head>
       <div className="w-full h-1 bg-pink-200"></div>
       <Navbar />
@@ -34,7 +41,7 @@ export default function Home() {
       <Carousel defaultWait={5000}>
         <Slide left>
           <div className="py-1">
-            <h1>PureTony Clothing</h1>
+            <h1>PureTony Clothing - Urban Streetwear</h1>
           </div>
         </Slide>
         <Slide left>
@@ -44,7 +51,7 @@ export default function Home() {
         </Slide>
         <Slide left>
           <div className="py-1">
-            <h2>Visit my website @ stylidisx.com</h2>
+            <h3>Visit my website @ stylidisx.com</h3>
           </div>
         </Slide>
       </Carousel>
@@ -57,13 +64,14 @@ export default function Home() {
                 src="/icons/logo2.png"
                 height={260}
                 width={260}
+                alt="PureTony logo"
               />
             </div>
 
             <div className="sm:mt-10">
-              <p className="text-2xl mt-4 text-gray-800 font-rubik">
+              <h2 className="text-2xl mt-4 text-gray-800 font-rubik">
                 Urban streetwear based in Thessaloniki, Greece.
-              </p>
+              </h2>
               <p className="text-4xl my-4 text-pink-400 font-inco font-semibold italic">
                 <Zoom left cascade>
                   <div style={{ display: "inline-block" }}>Why U </div>
@@ -76,7 +84,6 @@ export default function Home() {
           </div>
         </header>
       </div>
-
       <section className="bg-gradient-to-t from-white via-pink-50 font-rubik">
         <div className="flex flex-wrap max-w-5xl mx-auto gap-5 justify-around">
           <HomePageCard imgsrc="/icons/star-outline.svg" text="TOP QUALITY" />
@@ -88,6 +95,30 @@ export default function Home() {
           <HomePageCard imgsrc="/icons/organic-cotton.png" text="100% COTTON" />
         </div>
       </section>
+
+      <section
+        style={{ backgroundColor: "#0C0C0C" }}
+        className="text-white py-10 my-20 text-center font-rubik"
+      >
+        <Zoom right>
+          <p
+            className="text-3xl font-bold"
+            style={{ textShadow: "-2px -1px 0px rgba(252, 231, 243, 0.1)" }}
+          >
+            BE BETTER THAN YOUR BEST SELF
+          </p>
+        </Zoom>
+        <Zoom left>
+          <Link href="/shop">
+            <button
+              className="bg-white p-2 focus:outline-none mt-5 hover:bg-pink-100 transition duration-300"
+              style={{ color: "#0C0C0C" }}
+            >
+              SHOP NOW
+            </button>
+          </Link>
+        </Zoom>
+      </section>
       <main className="flex flex-col overflow-hidden w-full bg-gradient-to-t from-white via-green-100 to-white   mt-5 p-10">
         <HeadShake delay={450}>
           <div className="w-40 h-2 rounded-xl mx-auto mt-10 mb-20 bg-gradient-to-r from-green-500 to-green-700 transform rotate-6"></div>
@@ -98,7 +129,12 @@ export default function Home() {
             <Bounce left delay={900}>
               <Link href="/shop">
                 <div className="relative shadow-md transform hover:scale-105 cursor-pointer hover:-rotate-3 transition duration-300">
-                  <Image src="/gallery/3.jpg" width={500} height={500} />
+                  <Image
+                    src="/gallery/3.jpg"
+                    width={500}
+                    height={500}
+                    alt="Promotional home page image that links to the shop page."
+                  />
                   <span className="opacity-0 h-full hover:opacity-100 transition duration-300 bg-black bg-opacity-80 absolute pt-20 top-0 left-0 text-center text-white text-3xl font-rubik px-4">
                     CLICK HERE AND GO TO THE SHOP
                   </span>
@@ -106,7 +142,7 @@ export default function Home() {
               </Link>
             </Bounce>
 
-            <Bounce right delay={1400}>
+            <Bounce right delay={1200}>
               <Link href="/products/602e52e568287f23586e6875">
                 <div className="relative shadow-md transform hover:scale-105 cursor-pointer hover:rotate-3 transition duration-300">
                   <Image
@@ -114,6 +150,7 @@ export default function Home() {
                     src="/gallery/1.jpg"
                     width={500}
                     height={500}
+                    alt="Promotion Image for Home page, Black Tee v2"
                   />
 
                   <span className="opacity-0 hover:opacity-100 transition duration-300 bg-black bg-opacity-80 absolute w-full pt-20 h-full top-0 left-0 text-center text-white text-3xl font-rubik px-4">
@@ -126,9 +163,9 @@ export default function Home() {
         </div>
       </main>
       <section className="w-full h-96 relative bg-black overflow-hidden">
-        <p className="absolute text-white text-center font-rubik w-full text-3xl">
+        <h4 className="absolute text-white text-center font-rubik w-full text-3xl">
           NEVER MISS ON ANYTHING.
-        </p>
+        </h4>
         <SecondVideo />
       </section>
       <Footer />

@@ -17,6 +17,12 @@ const cart = ({ products }) => {
     <>
       <Head>
         <title>PureTony | Cart</title>
+        <meta name="robots" content="noindex" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Your cart info. Is it empty? Then, you better go check the shop page and fill it!"
+        />
       </Head>
       <div className="w-full h-1 bg-yellow-200"></div>
 

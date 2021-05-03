@@ -18,6 +18,7 @@ const CartItem = ({ item }) => {
           src={getStrapiMedia(item.product.photo)}
           width={150}
           height={150}
+          alt="Product in cart image."
         />
       </div>
       <div className="flex flex-col p-4 justify-around">

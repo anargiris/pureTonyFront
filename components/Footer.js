@@ -21,6 +21,7 @@ const Footer = () => {
               width={20}
               height={20}
               className="transform bg-white rounded-md hover:scale-105 transition duration-75"
+              alt="Instagram link footer image."
             />
           </a>
         </div>
@@ -36,6 +37,7 @@ const Footer = () => {
               width={20}
               height={20}
               className="transform bg-white rounded-md hover:scale-105 transition duration-75"
+              alt="Send mail footer image."
             />
           </a>
         </div>

@@ -84,6 +84,10 @@ const Product = ({ product }) => {
     <>
       <Head>
         <title>PureTony | {product.name}</title>
+        <meta
+          name="description"
+          content={`PureTony product page. This is the product page of ${product.name}.`}
+        />
       </Head>
       <div className="w-full h-1 bg-purple-400"></div>
       {noStock ? (
