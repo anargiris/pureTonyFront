@@ -232,7 +232,7 @@ const checkout = () => {
 
                 // POST the order to the backend
 
-                fetch("http://localhost:1337/orders", {
+                fetch("https://aqueous-fortress-08267.herokuapp.com/orders", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
@@ -245,17 +245,20 @@ const checkout = () => {
                 //Update Product's quantity
                 cartItems.map((item) => {
                   let newQuantity = item.quantity - 1;
-                  fetch(`http://localhost:1337/products/${item.product.id}`, {
-                    method: "PUT",
-                    headers: {
-                      "Content-Type": "application/json",
-                      Authorization:
-                        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOGMwZWJkODk4MDA2MWMxNGEwODY3OCIsImlhdCI6MTYxOTc5MjA3MywiZXhwIjoxNjIyMzg0MDczfQ.3tgFyH_9dwp0MNK2un79mcLq1QSwh-XyhKULAqvtdEA",
-                    },
-                    body: JSON.stringify({
-                      quantity: newQuantity,
-                    }),
-                  })
+                  fetch(
+                    `https://aqueous-fortress-08267.herokuapp.com/products/${item.product.id}`,
+                    {
+                      method: "PUT",
+                      headers: {
+                        "Content-Type": "application/json",
+                        Authorization:
+                          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOGMwZWJkODk4MDA2MWMxNGEwODY3OCIsImlhdCI6MTYxOTc5MjA3MywiZXhwIjoxNjIyMzg0MDczfQ.3tgFyH_9dwp0MNK2un79mcLq1QSwh-XyhKULAqvtdEA",
+                      },
+                      body: JSON.stringify({
+                        quantity: newQuantity,
+                      }),
+                    }
+                  )
                     .then((response) => response.json())
                     .then((data) => console.log(data));
                 });
