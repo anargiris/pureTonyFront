@@ -265,12 +265,6 @@ const checkout = () => {
             />
           </div>
         )}
-
-        {!step1 && step2 && formik.values.payment === "onDelivery" && (
-          <div>
-            <p>Thanks for purchasing stuff.</p>
-          </div>
-        )}
       </div>
     </>
   );
