@@ -68,6 +68,8 @@ export default function Home() {
                 height={260}
                 width={260}
                 alt="PureTony logo"
+                quality={100}
+                priority
               />
             </div>
 
@@ -137,6 +139,7 @@ export default function Home() {
                     width={500}
                     height={500}
                     alt="Promotional home page image that links to the shop page."
+                    quality={100}
                   />
                   <span className="opacity-0 h-full hover:opacity-100 transition duration-300 bg-black bg-opacity-80 absolute pt-20 top-0 left-0 text-center text-white text-3xl font-rubik px-4">
                     CLICK HERE AND GO TO THE SHOP
@@ -153,6 +156,7 @@ export default function Home() {
                     width={500}
                     height={500}
                     alt="Promotion Image for Home page, Black Tee v2"
+                    quality={100}
                   />
                   <span className="opacity-0 hover:opacity-100 transition duration-300 bg-black bg-opacity-80 absolute w-full pt-20 h-full top-0 left-0 text-center text-white text-3xl font-rubik px-4">
                     CHECK THE LATEST BLACK TEE v2

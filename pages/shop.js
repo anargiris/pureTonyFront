@@ -27,8 +27,6 @@ const shop = ({ products }) => {
   };
 
   const handleChangePrice = (e) => {
-    const value = e.target.value;
-    console.log(value);
     if (value === "def") {
       const testArr = [...products];
       const filteredProd = testArr.filter(

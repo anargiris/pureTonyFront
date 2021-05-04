@@ -13,6 +13,7 @@ const ProductCard = ({ product }) => {
           height={300}
           alt={`Product Card showcase for PureTony shop page. This one is for the product named ${product.name}`}
           className="hover:opacity-95  transform hover:scale-110 hover:rotate-2 transition duration-150"
+          priority
         />
       </Link>
       <div className="flex justify-between px-2">
