@@ -12,10 +12,16 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
             href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
             rel="stylesheet"
           />
           <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
             href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap"
             rel="stylesheet"
           ></link>
