@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </header>
       </div>
-      <section className="bg-gradient-to-t from-white via-pink-50 font-rubik">
+      <section className="bg-gradient-to-t mt-10 from-white via-pink-50 font-rubik">
         <div className="flex flex-wrap max-w-5xl mx-auto gap-5 justify-around">
           <HomePageCard imgsrc="/icons/star-outline.svg" text="TOP QUALITY" />
           <HomePageCard imgsrc="/icons/time-outline.svg" text="FAST SHIPPING" />

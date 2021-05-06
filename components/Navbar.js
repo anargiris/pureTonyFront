@@ -25,7 +25,6 @@ const Navbar = () => {
             <Link href="/">
               <Image
                 src="/gallery/logo.png"
-                className=""
                 height={50}
                 width={100}
                 alt="PureTony Navbar Official Logo"
@@ -53,7 +52,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="bg-gray-100 text-gray-600 shadow-sm rounded-lg px-4">
+      <div className="bg-gray-50 text-gray-600 shadow-md rounded-md px-4">
         {session ? (
           <>
             <div className="flex gap-4 mt-2 mb-1">
@@ -68,14 +67,18 @@ const Navbar = () => {
                 onClick={handleLogout}
                 className="logout mt-2 font-rubik"
               >
-                Logout
+                <Image
+                  src="/icons/log-out-outline.svg"
+                  width={25}
+                  height={25}
+                />
               </a>
             </div>
           </>
         ) : (
-          <div className="mt-3">
+          <div className="mt-4">
             <a href="#" onClick={handleLogin} className="logout font-rubik">
-              Login
+              <Image src="/icons/log-in-outline.svg" width={25} height={25} />
             </a>
           </div>
         )}

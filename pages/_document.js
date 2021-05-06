@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en-US">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -19,6 +19,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap"
             rel="stylesheet"
           ></link>
+          <meta
+            name="keywords"
+            content="eshop, puretony, urban, streetwear, ecommerce, project, web developer, shop, thessaloniki, online store"
+          ></meta>
         </Head>
         <body>
           <Main />
