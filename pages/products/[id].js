@@ -93,7 +93,7 @@ const Product = ({ product }) => {
       {noStock ? (
         <RubberBand>
           <div
-            className="fixed text-center rounded-md shadow-md w-40 p-2 z-10 bg-red-600 text-white mx-auto"
+            className="fixed text-center rounded-md shadow-md w-40 p-2 z-20 bg-red-600 text-white mx-auto"
             style={{ left: "50%" }}
           >
             <p>Can't add more!</p>

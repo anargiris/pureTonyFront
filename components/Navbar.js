@@ -61,6 +61,7 @@ const Navbar = () => {
                 src={session.user.image}
                 className="user"
                 className="w-10 h-10 rounded-full shadow-md "
+                alt="user picture"
               />
               <a
                 href="#"

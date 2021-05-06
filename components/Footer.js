@@ -52,7 +52,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 text-white p-1 text-xs">
+      <div className="absolute text-yellow-100 bottom-0 right-0 p-1 text-xs">
         Anargyros Stylidis
       </div>
     </footer>

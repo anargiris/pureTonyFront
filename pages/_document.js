@@ -19,8 +19,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap"
             rel="stylesheet"
           ></link>
-          <script src="https://www.paypal.com/sdk/js?client-id=AZwibABPB9iIzF5Os51Ky8MfzHSZhzgm2XCb63DDTsVBA2Zfqe5FfJHCqT1y1PHRqnfL2T8pbTgzNr27&disable-funding=credit,card"></script>
-          <script src="https://www.paypalobjects.com/api/checkout.js" />
         </Head>
         <body>
           <Main />
