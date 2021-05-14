@@ -5,7 +5,6 @@ module.exports = {
     extend: {
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
-        inco: ["Inconsolata", "monospace"],
       },
     },
   },

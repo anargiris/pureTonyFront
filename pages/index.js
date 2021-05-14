@@ -52,7 +52,7 @@ export default function Home() {
         </Slide>
         <Slide left>
           <div className="py-1">
-            <h3>Visit my website @ stylidisx.com</h3>
+            <h3>Visit my website @ stylidis.io</h3>
           </div>
         </Slide>
       </Carousel>
@@ -77,19 +77,11 @@ export default function Home() {
               <h2 className="text-2xl mt-4 text-gray-800 font-rubik">
                 Urban streetwear based in Thessaloniki, Greece.
               </h2>
-              <p className="text-4xl my-4 text-pink-400 font-inco font-semibold italic">
-                <Zoom left cascade>
-                  <div style={{ display: "inline-block" }}>Why U </div>
-                </Zoom>
-                <Zoom right cascade duration={1400}>
-                  <div style={{ display: "inline-block" }}> Trippin' ?</div>
-                </Zoom>
-              </p>
             </div>
           </div>
         </header>
       </div>
-      <section className="bg-gradient-to-t mt-10 from-white via-pink-50 font-rubik">
+      <section className="bg-gradient-to-t mt-10 from-white via-pink-100 font-rubik">
         <div className="flex flex-wrap max-w-5xl mx-auto gap-5 justify-around">
           <HomePageCard imgsrc="/icons/star-outline.svg" text="TOP QUALITY" />
           <HomePageCard imgsrc="/icons/time-outline.svg" text="FAST SHIPPING" />
@@ -124,14 +116,14 @@ export default function Home() {
           </Link>
         </Zoom>
       </section>
-      <main className="flex flex-col overflow-hidden w-full bg-gradient-to-t from-white via-green-100 to-white   mt-5 p-10">
+      <main className="flex flex-col overflow-hidden w-full bg-gradient-to-t from-white via-green-200 to-white p-10">
         <HeadShake delay={450}>
-          <div className="w-40 h-2 rounded-xl mx-auto mt-10 mb-20 bg-gradient-to-r from-green-500 to-green-700 transform rotate-6"></div>
+          <div className="w-40 h-1 rounded-xl mx-auto mb-20 bg-gradient-to-r from-green-300 to-green-400 transform rotate-6"></div>
         </HeadShake>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto mb-10">
           <div className="flex sm:flex-row flex-col gap-10">
-            <Bounce left delay={900}>
+            <Bounce left delay={800}>
               <Link href="/shop">
                 <div className="relative transform hover:scale-105 cursor-pointer hover:-rotate-3 transition duration-300">
                   <Image
@@ -148,7 +140,7 @@ export default function Home() {
               </Link>
             </Bounce>
 
-            <Bounce right delay={1200}>
+            <Bounce right delay={1000}>
               <Link href="/products/602e52e568287f23586e6875">
                 <div className="relative transform hover:scale-105 cursor-pointer hover:rotate-3 transition duration-300">
                   <Image
@@ -167,9 +159,10 @@ export default function Home() {
           </div>
         </div>
       </main>
+
       <section className="w-full h-96 relative bg-black overflow-hidden">
         <h4 className="absolute text-white text-center font-rubik w-full text-3xl">
-          NEVER MISS ON ANYTHING.
+          NEVER MISS ON ANYTHING
         </h4>
         <SecondVideo />
       </section>

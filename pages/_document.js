@@ -15,10 +15,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
             rel="stylesheet"
           />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap"
-            rel="stylesheet"
-          ></link>
           <meta
             name="keywords"
             content="eshop, puretony, urban, streetwear, ecommerce, project, web developer, shop, thessaloniki, online store"

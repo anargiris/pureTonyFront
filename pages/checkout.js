@@ -67,7 +67,7 @@ const checkout = () => {
       <div className="w-full h-1 bg-purple-400"></div>
 
       <Navbar></Navbar>
-      <section className="bg-gradient-to-t from-gray-100">
+      <section className="bg-gradient-to-t from-gray-100 min-h-screen">
         <div className="max-w-5xl mx-auto">
           {step1 && !step2 && (
             <div className="max-w-2xl my-10 mx-auto shadow-xl">

@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import getStrapiMedia from "../utils/media";
-
 const HomePageCard = ({ imgsrc, text }) => {
   return (
     <div className="bg-white border rounded-lg px-4 py-8 border-gray-300 shadow-md w-40 h-40 mt-4 hover:bg-pink-50 transition duration-200">

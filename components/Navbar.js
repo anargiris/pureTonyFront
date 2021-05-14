@@ -52,7 +52,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="bg-gray-50 text-gray-600 shadow-md rounded-md px-4">
+      <div className=" text-gray-600 shadow-sm rounded-md px-4">
         {session ? (
           <>
             <div className="flex gap-4 mt-2 mb-1">
@@ -71,6 +71,8 @@ const Navbar = () => {
                   src="/icons/log-out-outline.svg"
                   width={25}
                   height={25}
+                  alt="log out button"
+                  className="transform hover:scale-110 transition duration-150"
                 />
               </a>
             </div>
@@ -78,7 +80,13 @@ const Navbar = () => {
         ) : (
           <div className="mt-4">
             <a href="#" onClick={handleLogin} className="logout font-rubik">
-              <Image src="/icons/log-in-outline.svg" width={25} height={25} />
+              <Image
+                src="/icons/log-in-outline.svg"
+                width={25}
+                height={25}
+                className="transform hover:scale-110 transition duration-150"
+                alt="log in button"
+              />
             </a>
           </div>
         )}
