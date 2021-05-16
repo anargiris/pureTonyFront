@@ -15,6 +15,7 @@ const Footer = () => {
             href="https://www.instagram.com/puretony_clothing/?hl=en"
             target="_blank"
             className="cursor-pointer"
+            rel="noreferrer"
           >
             <Image
               src="/icons/instagram.svg"

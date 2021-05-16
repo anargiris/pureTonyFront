@@ -1,5 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import OnDelivery from "../components/OnDelivery";
+import Footer from "../components/Footer";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useFormik } from "formik";
@@ -14,6 +16,8 @@ const checkout = () => {
   const [session] = useSession();
   const [step1, setStep1] = useState(true);
   const [step2, setStep2] = useState(false);
+
+  const [orderDone, setOrderDone] = useState(false);
   const [order, setOrder] = useState({
     firstName: "",
     lastName: "",
@@ -35,7 +39,7 @@ const checkout = () => {
       address: "",
       postal: "",
       mobile: "",
-      payment: "",
+      payment: "onDelivery",
     },
     onSubmit: (values) => {
       cartItems.map((item) => products.push([item.product.name, item.size]));
@@ -57,6 +61,49 @@ const checkout = () => {
     },
   });
 
+  const postOrder = () => {
+    console.log(order);
+    if (!orderDone) {
+      fetch("https://aqueous-fortress-08267.herokuapp.com/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(order),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+
+      cartItems.map((item) => {
+        let newQuantity = item.quantity + 1;
+        fetch(
+          `https://aqueous-fortress-08267.herokuapp.com/products/${item.product.id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOGMwZWJkODk4MDA2MWMxNGEwODY3OCIsImlhdCI6MTYxOTc5MjA3MywiZXhwIjoxNjIyMzg0MDczfQ.3tgFyH_9dwp0MNK2un79mcLq1QSwh-XyhKULAqvtdEA",
+            },
+            body: JSON.stringify({
+              quantity: newQuantity,
+            }),
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+      });
+      setOrderDone(true);
+      setCartItems([]);
+      router.push("/");
+    }
+  };
+  useEffect(() => {
+    setStep1(false);
+    setStep2(true);
+    formik.values.payment = "onDelivery";
+  }, []);
+
   return (
     <>
       <Head>
@@ -76,6 +123,7 @@ const checkout = () => {
                   Checkout Proccess
                 </h1>
               </div>
+              {/** FORM START */}
               <form
                 onSubmit={formik.handleSubmit}
                 className="flex flex-col flex-wrap gap-4 p-4 text-gray-800 border border-gray-300 shadow-md text-lg"
@@ -185,6 +233,7 @@ const checkout = () => {
                       Mobile Number
                     </label>
                     <input
+                      required={true}
                       id="mobile"
                       name="mobile"
                       type="text"
@@ -202,7 +251,6 @@ const checkout = () => {
                   required={true}
                   className=" border mt-4 focus:outline-none border-gray-400"
                 >
-                  <option value="def" label="Select payment method" />
                   <option value="onDelivery" label="On delivery" />
                   <option value="paypal" label="PayPal" />
                 </select>
@@ -217,6 +265,7 @@ const checkout = () => {
                     : "Submit"}
                 </button>
               </form>
+              {/** FORM END */}
             </div>
           )}
           {!step1 && step2 && formik.values.payment == "paypal" && (
@@ -275,8 +324,28 @@ const checkout = () => {
               />
             </div>
           )}
+
+          {!step1 && step2 && formik.values.payment == "onDelivery" && (
+            <>
+              <h3 className="text-3xl font-black text-center mb-5">
+                Finalize your order
+              </h3>
+              <p className="text-xl text-center mb-5">
+                Click below to send your order.
+              </p>
+              <div className="w-24 m-auto">
+                <button
+                  className="text-center hover:bg-gray-900 hover:text-white transition duration-150 p-1 rounded-md border border-black"
+                  onClick={postOrder}
+                >
+                  Send Order
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </section>
+      <Footer />
     </>
   );
 };

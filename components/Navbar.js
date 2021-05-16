@@ -25,8 +25,8 @@ const Navbar = () => {
             <Link href="/">
               <Image
                 src="/gallery/logo.png"
-                height={50}
-                width={100}
+                height={60}
+                width={120}
                 alt="PureTony Navbar Official Logo"
               />
             </Link>
