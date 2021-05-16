@@ -75,7 +75,7 @@ const checkout = () => {
         .then((data) => console.log(data));
 
       cartItems.map((item) => {
-        let newQuantity = item.quantity + 1;
+        let newQuantity = item.quantity - 1;
         fetch(
           `https://aqueous-fortress-08267.herokuapp.com/products/${item.product.id}`,
           {
@@ -98,11 +98,6 @@ const checkout = () => {
       router.push("/");
     }
   };
-  useEffect(() => {
-    setStep1(false);
-    setStep2(true);
-    formik.values.payment = "onDelivery";
-  }, []);
 
   return (
     <>
