@@ -8,7 +8,9 @@ const HomePageCard = ({ imgsrc, text }) => {
         <Image src={imgsrc} width={50} height={50} alt="Homepage Card image" />
       </div>
       <div className="mt-4">
-        <p className="text-center font-semibold text-gray-900">{text}</p>
+        <p className="text-center font-semibold text-gray-900 pointer-events-none">
+          {text}
+        </p>
       </div>
     </div>
   );

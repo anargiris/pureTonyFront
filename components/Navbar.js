@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between py-2 md:px-40 px-5 max-w-full border-b border-gray-200 shadow-sm">
+    <nav className="flex justify-between py-2 lg:px-40 px-5 max-w-full border-b border-gray-200 shadow-sm">
       <div>
         <ul className="flex gap-5">
           <li className="cursor-pointer">
@@ -32,17 +32,17 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li className="mt-3 font-rubik">
+          <li className="mt-5 font-rubik inline-block">
             <Link href="/shop">
-              <a className="text-gray-800 text-xl cursor-pointer border-b border-gray-50 hover:border-pink-400 transition duration-150 font-semibold">
+              <a className="text-gray-800 text-xl cursor-pointer  hover:text-pink-400 transition duration-150 font-semibold">
                 SHOP
               </a>
             </Link>
           </li>
 
-          <li className="mt-3 font-rubik">
+          <li className="mt-5 font-rubik">
             <Link href="/cart">
-              <a className="text-gray-800 text-xl relative cursor-pointer border-b border-gray-50 hover:border-pink-400 transition duration-150 font-semibold">
+              <a className="text-gray-800 text-xl relative cursor-pointer hover:text-pink-400 transition duration-150 font-semibold">
                 CART{" "}
                 {cartItems.length > 0 && (
                   <span className="absolute text-center h-2 w-2 text-sm mt-1 rounded-full bg-red-600 "></span>
@@ -52,7 +52,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className=" text-gray-600 shadow-sm rounded-md px-4">
+      <div className=" text-gray-600 mt-1 shadow-sm rounded-md px-4">
         {session ? (
           <>
             <div className="flex gap-4 mt-2 mb-1">
