@@ -5,7 +5,6 @@ import Link from "next/link";
 import Head from "next/head";
 import OpenerVideo from "../components/OpenerVideo";
 import SecondVideo from "../components/SecondVideo";
-import { session } from "next-auth/client";
 import Zoom from "react-reveal/Zoom";
 import HomePageCard from "../components/HomePageCard";
 
@@ -47,12 +46,12 @@ export default function Home() {
         </Slide>
         <Slide left>
           <div className="py-1">
-            <h2>Full Stack project by Anargyros Stylidis</h2>
+            <p>Full Stack project by Anargyros Stylidis</p>
           </div>
         </Slide>
         <Slide left>
           <div className="py-1">
-            <h3>Visit my website @ stylidis.io</h3>
+            <p>Visit my website @ stylidis.io</p>
           </div>
         </Slide>
       </Carousel>
@@ -162,7 +161,7 @@ export default function Home() {
 
       <section className="w-full h-96 relative bg-black overflow-hidden">
         <h4 className="absolute text-white text-center font-rubik w-full text-3xl">
-          NEVER MISS ON ANYTHING
+          WHY U TRIPPIN' ?
         </h4>
         <SecondVideo />
       </section>

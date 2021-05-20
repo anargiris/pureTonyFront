@@ -15,6 +15,7 @@ export default function Signin({ providers, csrfToken }) {
           content="Sign in with your social media account."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex" />
       </Head>
       <div className="flex sm:flex-row flex-col max-w-screen h-screen">
         <div className="sm:w-2/5 py-5 sm:py-0 bg-gradient-to-b from-green-50 to-green-200 font-rubik">

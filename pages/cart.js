@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { CartContext } from "../components/context/CartContext";
 import CartItem from "../components/CartItem";
+import CartBg from "../components/CartBg";
 
 const cart = ({ products }) => {
   const [cartItems, setCartItems] = useContext(CartContext);
@@ -51,7 +52,8 @@ const cart = ({ products }) => {
             </div>
           </div>
         ) : (
-          <div className="w-full h-screen bg-gradient-to-tr from-gray-100">
+          <div className="w-full h-screen relative bg-gradient-to-tr from-gray-100 overflow-hidden">
+            <CartBg />
             <div className="max-w-5xl mx-auto p-10">
               <h3 className="text-3xl text-gray-800">
                 Oops! Looks like your cart is empty.

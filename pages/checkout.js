@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import OnDelivery from "../components/OnDelivery";
 import Footer from "../components/Footer";
 import Head from "next/head";
 import { useRouter } from "next/router";
